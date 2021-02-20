@@ -1,0 +1,47 @@
+server:
+  port: 9998
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+spring:
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#        enabled: true
+  redis:
+    database: 10
+    host: 127.0.0.1
+    password: 123456
+    port: 6379
+    timeout: 3000ms
+  elasticsearch:
+    rest:
+      uris: 127.0.0.1:9200
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/debug
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://127.0.0.1:3306/study?serverTimezone=GMT%2B8&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=false
+    username: root
+    password: 654321
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#pamirs:
+#  scheduler:
+#    zookeeper:
+#      zkConnectString: ${zookeeper.host:127.0.0.1}:${zookeeper.port:2181}
+#      zkSessionTimeout: 60000
+#      rootPath: /idaas
+#      userName:
+#      password:
+#      start: true
